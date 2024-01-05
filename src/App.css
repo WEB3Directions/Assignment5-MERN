@@ -42,13 +42,24 @@
 
 }
 
+.second_path_chairs {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 10px;
+
+ 
+
+
+}
+
 .NavContainer2 {
   align-items: center;
   justify-content: center;
   display: flex;
   color: black;
   alt: unset;
-  background-color: rgb(243, 237, 237);
+  
 
 }
 
@@ -116,9 +127,9 @@
 }
 
 .main {
+ display: inline-block;
+  margin: 1.5%;
 
-  display: inline-block;
-  margin: 1%;
  
 }
 

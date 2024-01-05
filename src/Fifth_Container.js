@@ -5,7 +5,9 @@ const Fifth_Container = () => {
     <div style={{background: "offWhite"}}>
 
 <div> 
-    
+     <br/>
+     <br/>  
+     
     
        
          
@@ -14,7 +16,7 @@ const Fifth_Container = () => {
         <br/>
        
       
-       <div className="NavContainer2">
+       <div className="NavContainer2" style={{background:"url(https://media.istockphoto.com/id/1387999856/photo/abstract-white-background-with-connected-dots-and-lines-medical-background-background-for.jpg?s=2048x2048&w=is&k=20&c=q_Pbb0MAy9KSvmLgXqsYK7DSVXeDOa1FdQDF_pOBk7Q=" , width: "100%", height: "30vh"}}>
        <img src="./logox.pg.png" width="40" />
       <div> <h1>Daxone</h1> </div>  &nbsp;&nbsp; &nbsp;
        <div> <p>Follow us:</p> 

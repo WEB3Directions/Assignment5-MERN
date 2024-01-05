@@ -1,74 +1,45 @@
-import React from 'react';
-// import { Link, Router } from "react-router-dom";
-
-// import Header from "./components/Header";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
- import Cards from "./card";
-
+import React from 'react'
 import "./App.css";
-
-// import Text3 from "./components/text3";
-// import First_Component from "./components/First_Component";
-// import Second_Component from "./components/Second_Component";
-// import Third_Component from "./Third_Component";
-//import Chair_container from "./Chair_container.js";
-import Chair_container from './Chair_container.js';
-import Nav_Container from './components/Nav_Container.js';
-import Second_container from './components/Second_container.js';
-import Third_Container from './components/Third_Container.js';
-import Cards2 from './Cards2.js';
-import Fourth_Container from './components/Fourth_Container.js';
-import Fifth_Container from './Fifth_Container.js';
-
-
-
-
-
-
-
-
+import Apps from "./Apps.js"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import First_chair from './First_chair.js';
+import Second_chair from './Second_chair.js';
+import Third_chair from './Third_chair.js';
+import Forth_chair from './Forth_chair.js';
+import Fifth_chair from './Fifth_chair.js';
+import Sixth_chair from './Sixth_chair.js';
+import Seventh_chair from './Seventh_chair.js';
+import Eigth_chair from './Eigth_chair.js';
 
 
 
 
 function App() { 
+  console.log(First_chair); 
   
-  
-
-
-
   return (
 
     <div >
-    <Nav_Container/>
-   <Chair_container/>
-   <Second_container/>
-   <Third_Container/>
-   <br/> <br/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc= "./Chair1.png" price="$250.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair.2.png" price="$200.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair3.png" price="$220.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair4.png" price="$290.00"/>
-   <br/> <br/> <br/>
-   <Cards2 imgSrc="https://i.ebayimg.com/images/g/i8kAAOSwlEtj5bY-/s-l1200.jpg"/>
-   <Fourth_Container/>
+<BrowserRouter>
 
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc= "./Chair5.png" price="$50.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair6.png" price="$250.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair7.png" price="$300.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair8.png" price="$500.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc= "./Chair9.png" price="$180.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair10.png" price="$200.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair11.png" price="$110.00"/>
-   <Cards title="Chair" desc="Golden Easy Spot Chair" imgSrc="./Chair12.png" price="$100.00"/>
-   <br/> <br/> <br/>
-
-   <Fifth_Container/>
-
-   
-  
-
+      <div>
+        
+        <Routes>
+        <Route path="/" element={<Apps />} />
+          <Route path="/First_chair" element={<First_chair/>} />
+          <Route path="/Second_chair" element={<Second_chair/>} />
+          <Route path="/Third_chair" element={<Third_chair/>} />
+          <Route path="/Fourth_chair" element={<Forth_chair/>} />
+          <Route path="/Fifth_chair" element={<Fifth_chair/>} />
+          <Route path="/Sixth_chair" element={<Sixth_chair/>} />
+          <Route path="/Seventh_chair" element={<Seventh_chair/>} />
+          <Route path="/Eight_chair" element={<Eigth_chair/>}/>
+          
+          
+        </Routes>
+      </div>
+    
+    </BrowserRouter>
      
 </div>
 
