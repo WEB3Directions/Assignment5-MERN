@@ -10,25 +10,32 @@ import Typography from '@mui/material/Typography';
 
 export default function Cards3(props) {
   return (
-    <div className='main2'>
-    <Card sx={{ width: 650 }}>
-      <CardMedia
-        sx={{ height: 650 }}
-        image={props.imgSrc}
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          
-        </Typography>
-      </CardContent>
-     
-    </Card>
+    <div>
+      <div className='main2'>
+        <Card sx={{ width: 650 }}>
+          <CardMedia
+            sx={{ height: 650 }}
+            image={props.imgSrc}
+            title="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+
+            </Typography>
+          </CardContent>
+
+        </Card>
+
+        <br />
+      </div>
+      <div>
+        <button onClick={props.go_back_handle}>Go back</button>
 
 
+      </div>
     </div>
   );
 }

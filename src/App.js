@@ -1,296 +1,217 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./App.css";
-import Apps from "./Apps.js"
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import First_chair from './First_chair.js';
-import Second_chair from './Second_chair.js';
-import Third_chair from './Third_chair.js';
-import Forth_chair from './Forth_chair.js';
-import Fifth_chair from './Fifth_chair.js';
-import Sixth_chair from './Sixth_chair.js';
-import Seventh_chair from './Seventh_chair.js';
-import Eigth_chair from './Eigth_chair.js';
+import Cards3 from './components/Cards3.js';
+import TableWithBorders from './components/TableWithBorder.js';
+import Fifth_Container from './components/Fifth_Container.js';
+import Cards2 from './components/Cards2.js';
+import Cards from './components/card.js';
+import Chair_container from './components/Chair_container.js';
+import Second_container from './components/Second_container.js';
+import Third_Container from './components/Third_Container.js';
+import Fourth_Container from './components/Fourth_Container.js';
 
 
 
 
-function App() { 
-  console.log(First_chair); 
-  
+
+
+const product_arr = [
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-1.jpg",
+
+
+  },
+  {
+
+    image:
+      "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-2.jpg",
+
+  },
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-3.jpg",
+
+  },
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-4.jpg",
+  },
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-5.jpg",
+
+  },
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-6.jpg",
+
+  },
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-7.jpg",
+
+  },
+  {
+
+    image: "https://template.hasthemes.com/daxone/daxone/assets/images/product/pro-hm1-8.jpg",
+
+  },
+
+];
+
+
+
+function App() {
+
+  const [current_data, setCurrent_data] = useState(null);
+
+  const show_details_handle = (data) => {
+    setCurrent_data(data);
+  };
+
+  const go_back_handle = () => {
+    setCurrent_data(null);
+  };
+
+
   return (
 
     <div >
-<BrowserRouter>
 
-      <div>
-        
-        <Routes>
-        <Route path="/" element={<Apps />} />
-          <Route path="/First_chair" element={<First_chair/>} />
-          <Route path="/Second_chair" element={<Second_chair/>} />
-          <Route path="/Third_chair" element={<Third_chair/>} />
-          <Route path="/Fourth_chair" element={<Forth_chair/>} />
-          <Route path="/Fifth_chair" element={<Fifth_chair/>} />
-          <Route path="/Sixth_chair" element={<Sixth_chair/>} />
-          <Route path="/Seventh_chair" element={<Seventh_chair/>} />
-          <Route path="/Eight_chair" element={<Eigth_chair/>}/>
-          
-          
-        </Routes>
-      </div>
-    
-    </BrowserRouter>
-     
-</div>
+      {current_data ? (
 
-    
-  );
+        <div>
+          <div style={{ background: "url(https://media.istockphoto.com/id/1387999856/photo/abstract-white-background-with-connected-dots-and-lines-medical-background-background-for.jpg?s=2048x2048&w=is&k=20&c=q_Pbb0MAy9KSvmLgXqsYK7DSVXeDOa1FdQDF_pOBk7Q=", width: "100%", height: "50vh" }}>
 
-}
+            <div className="NavContainer2">
+              <img src="./logox.pg.png" width="40" />
+
+              <h1>Daxone</h1>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+              <div className='button2' >
+
+                <button className='button2'>Home</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button className='button2'>Shop</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button className='button2'>Mens</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button className='button2'>Pages</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button className='button2'>Blog</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button className='button2'>Contact</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                &#x1F50E;&#xFE0E;
+
+
+              </div>
+
+
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+            <div className="ChairContainer">
+
+
+              <h1>Product Detail Page</h1>
+            </div>
+            <div className="ChairContainer">
+              <p> Home / Product Detail</p>
+            </div>
+
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <div className="second_path_chairs">
+
+
+
+
+            <Cards3 go_back_handle={go_back_handle} title="Chair" desc="Golden Easy Spot Chair" imgSrc={current_data.imgSrc} />
+            <div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+            <h1> <p style={{ fontSize: "5" }}></p>Life Style <br /><br /><br /><h2> LaaVista Depro, FX 829 v1 <br /><br /><br /></h2> <img src="./stars.JPG"></img>  <p style={{ fontSize: "5" }}> <br />Size: </p><p style={{ fontSize: "5" }}> S &nbsp;  M &nbsp;  XL &nbsp;  XXL</p><button className='button1'> SHOP NOW</button> <br /><br /><h1>$1000.00 &nbsp; &nbsp; <s style={{ fontSize: "2" }}>$1050</s></h1></h1>
+
+
+          </div>
+          <div>
+
+            <TableWithBorders />
+
+          </div>
+          <div>
+
+            <Fifth_Container />
+          </div>
+
+        </div>
+
+      ) : (
+
+        <div >
+          <Chair_container />
+          <Second_container />
+          <Third_Container />
+          <br /> <br />
+          <div>
+            {product_arr.map((current_object, index) => {
+              return (
+                <Cards
+                  key={index}
+                  click_handle={show_details_handle}
+                  title="Chair" desc="Golden Easy Spot Chair" imgSrc={current_object.image} price="$250.00" />
+              )
+            })}
+
+          </div>
+          <br /> <br /> <br />
+          <Cards2 imgSrc="https://template.hasthemes.com/daxone/daxone/assets/images/banner/banner-1.jpg" />
+          <Fourth_Container />
+
+
+          <div>
+            {product_arr.map((current_object, index) => {
+              return (
+                <Cards
+                  key={index}
+                  click_handle={show_details_handle}
+                  title="Chair" desc="Golden Easy Spot Chair" imgSrc={current_object.image} price="$250.00" />
+
+
+
+              )
+            })}
+
+            <br /> <br /> <br />
+
+          </div>
+
+          <Fifth_Container />
+
+        </div>
+
+
+      )}
+
+
+    </div>
+
+  )
+
+};
 
 export default App;
 
 
 
 
-
-// function App() { 
-  
-//   return (
-
-//     <div className="offset-text" >
-
-//       <div> <Text3 color="blue"/>  </div>
-
-// <First_Component/>
-
-// <Second_Component/>
-      
-// <Third_Component/>
-     
-// </div>
-
-    
-//   );
-
-// }
-
-// export default App;
-
-
-
-// function App() { 
-  
-//   return (
-
-//     <div className="change">
-
-//     <Cards title="Honda" imgSrc="https://static.pakwheels.com/2023/10/redesigned-2025-honda-accord-aims-to-surprise-with-significant-virtual-design-changes-222083_1.jpg" desc="Accord 2024"/>
-//     <Cards title="Mercedes" imgSrc="https://www.thedrive.com/uploads/2022/07/21/2021-Mercedes-AMG-GT-Stealth-Edition.jpg?auto=webp&crop=16%3A9&auto=webp&optimize=high&quality=70&width=1440" desc="IMG GT"/>
-//     <Cards title="BMW" imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2019_BMW_M850i_xDrive_Automatic_4.4_Front.jpg/800px-2019_BMW_M850i_xDrive_Automatic_4.4_Front.jpg" desc="8 Series"/>
-//     <Cards title="Lexus" imgSrc="https://global.toyota/pages/news/images/2020/07/07/1330/20200707_02_07_s.jpg"  desc="LS 450 2022"/>
-     
-// </div>
-
-    
-//   );
-
-// }
-
-// export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Cards from "./card";
-// import Header from "./components/Header";
-// import footer from "./footer";
-// import Router from "./components/Router"
-// import './App.css';
-// // import { useState } from "react";
-
-
-
-
-// function App() {
-
-//   // const [userName, setUserName] = useState("Zakriya")
-//   // const changeName = () => {
-//   //   setUserName("Kiran")
-//   //}
-
-//   return (
-
-//     <div>
-// {/* 
-//       <h1> {userName} </h1> */}
-
-      
-//       {/* <h1>Header</h1>
-//       <Footer/>
-//        */}
-//    {/* <Cards title="Mercedes" imgSrc="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnN8ZW58MHx8MHx8fDA%3D"/>
-//    <Cards title="Dodge Viper" imgSrc="https://img.freepik.com/premium-photo/red-racing-car-drift-track-dust-from-wheels-art-illustration-motion-blur_305419-2157.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699056000&semt=ais"/>
-//    <Cards title="Lamborghini " imgSrc="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png"/>
-//    */}
-
-
-//      {/* <button onClick={changeName}>Update Name</button> */}
-
-
-
-
-//        </div>
-//   )
-// }
-
-// export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
